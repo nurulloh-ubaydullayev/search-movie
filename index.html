@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movies list</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <h1 class="main-heading">Movies catalog</h1>
+    <div class="container">
+      <div class="films__left-part">
+        <div class="form-wrapper">
+          <form class="films-form">
+            <input class="film-input" type="text" placeholder="Film name" />
+            <input class="film-input" type="number" placeholder="Film rating" />
+            <select name="movies" id="movies">
+              <option value="Genres" disabled selected>All</option>
+            </select>
+            <select name="movies-rating" id="movies-rating">
+              <option value="5" disabled selected>Rating (high to low)</option>
+            </select>
+            <button class="films-submit" type="submit">Search</button>
+          </form>
+        </div>
+        <!-- ===========  ========= -->
+        <div class="bookmarked-movies">
+          <h2 class="bookmarked__heading">Bookmarked movies</h2>
+          <ul class="bookmarked-movies__list">
+            <li class="bookmarked__list__item">
+              <h3 class="bookmarked__item__heading">Avengers: Infinity war</h3>
+              <button class="remove-btn">Remove</button>
+            </li>
+            <li class="bookmarked__list__item">
+              <h3 class="bookmarked__item__heading">Avengers: Infinity war</h3>
+              <button class="remove-btn">Remove</button>
+            </li>
+            <li class="bookmarked__list__item">
+              <h3 class="bookmarked__item__heading">Avengers: Infinity war</h3>
+              <button class="remove-btn">Remove</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- =================================================================================== -->
+
+      <div class="movies-list-wrapper">
+        <p class="search-result">Search result: 39</p>
+        <div class="modal">Use the form on left to search for a movie</div>
+        <ul class="movies-list"></ul>
+      </div>
+    </div>
+    <script src="./js/films.js"></script>
+    <script src="./js/render-films.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
