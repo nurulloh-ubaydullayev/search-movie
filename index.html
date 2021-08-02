@@ -13,13 +13,20 @@
       <div class="films__left-part">
         <div class="form-wrapper">
           <form class="films-form">
-            <input class="film-input" type="text" placeholder="Film name" />
+            <input
+              class="film-input search"
+              type="search"
+              placeholder="Film name"
+            />
             <input class="film-input" type="number" placeholder="Film rating" />
-            <select name="movies" id="movies">
-              <option value="Genres" disabled selected>All</option>
+            <select class="films-genres" name="movies" id="movies">
+              <option value="all">All</option>
             </select>
             <select name="movies-rating" id="movies-rating">
-              <option value="5" disabled selected>Rating (high to low)</option>
+              <option value="old_new">OLD_NEW</option>
+              <option value="new_old">NEW_OLD</option>
+              <option value="a_z">A_Z</option>
+              <option value="z_a">Z_A</option>
             </select>
             <button class="films-submit" type="submit">Search</button>
           </form>
@@ -52,8 +59,31 @@
         <ul class="movies-list"></ul>
       </div>
     </div>
+
+    <template id="movie-template">
+      <li class="films-list__item">
+        <img
+          class="films-item__img"
+          src="https://image.tmdb.org/t/p/w500/xnopI5Xtky18MPhK40cZAGAOVeV.jpg"
+          width="250"
+          height="250"
+        />
+        <div class="film-content-wrapper">
+          <span class="films-item__title">Shazam!</span
+          ><span class="films-item__id">287947</span>
+          <time class="films-item__release-date" datetime="2020-10-21"
+            >2020-10-21</time
+          >
+          <ul class="films-item__genres"></ul>
+          <p class="films-item__overview">
+            A boy is given the ability to become an adult superhero in times of
+            need with a single magic word.
+          </p>
+        </div>
+      </li>
+    </template>
     <script src="./js/films.js"></script>
-    <script src="./js/render-films.js"></script>
+    <script src="./js/render-genres.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>
